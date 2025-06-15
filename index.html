@@ -3,194 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회사명 - 기업 홈페이지</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #3498db;
-        }
-        
-        main {
-            margin-top: 70px;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 2rem;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .section {
-            padding: 80px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section h2 {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            color: #2c3e50;
-        }
-        
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .services {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>넥스트에듀랩 - IT 전문 교육기관</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">회사명</div>
-            <ul class="nav-links">
-                <li><a href="#home">홈</a></li>
-                <li><a href="#about">회사소개</a></li>
-                <li><a href="#services">서비스</a></li>
-                <li><a href="#contact">연락처</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- 헤더 포함 -->
+    <div id="header-container"></div>
 
-    <main>
-        <section class="hero" id="home">
-            <h1>혁신적인 솔루션을 제공합니다</h1>
-            <p>고객의 성공이 저희의 성공입니다. 최고의 서비스로 함께하겠습니다.</p>
-        </section>
+    <!-- 메인 히어로 섹션 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>미래를 준비하는 IT 교육</h1>
+            <p>청년부터 중장년, 기업까지 모든 세대를 위한 최고의 IT 교육 솔루션을 제공합니다</p>
+            <div class="cta-buttons">
+                <a href="#programs" class="btn btn-primary">교육 프로그램 보기</a>
+                <a href="#contact" class="btn btn-secondary">무료 상담 신청</a>
+            </div>
+        </div>
+    </section>
 
-        <section class="section" id="about">
-            <h2>회사소개</h2>
-            <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
-                저희 회사는 2020년 설립되어 고객 중심의 혁신적인 서비스를 제공하고 있습니다. 
-                전문적인 팀과 최신 기술을 바탕으로 고객의 비즈니스 성장을 돕고 있습니다.
-            </p>
-        </section>
-
-        <section class="section" id="services">
-            <h2>주요 서비스</h2>
-            <div class="services">
-                <div class="service-card">
-                    <h3>웹 개발</h3>
-                    <p>반응형 웹사이트부터 복잡한 웹 애플리케이션까지 개발합니다.</p>
+    <!-- 교육 프로그램 섹션 -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2 class="section-title">강의 내용 </h2>
+            <div class="program-grid">
+                <div class="program-card fade-in">
+                    <h3>청년 대상 프로그램</h3>
+                    <p>취업을 준비하는 청년들을 위한 실무 중심 IT 교육</p>
+                    <ul class="program-features">
+                        <li>쳇gpt를 활용한 취업전략 (12시간)</li>
+                        <li>기업가정신함양의 창업전략 (12시간)</li>
+                        <li>창의적문제해결방법을 위한 트리즈 전략(12시간)</li>
+                        <li>Notion을 활용한 자소서작성 및 웹사이트 제작(12시간)</li>
+                        <li>생성형AI를 활용한 1인 미디어 크리에이터 되기 (20시간)</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">자세히 보기</a>
                 </div>
-                <div class="service-card">
-                    <h3>모바일 앱</h3>
-                    <p>iOS와 Android 플랫폼을 위한 네이티브 및 하이브리드 앱을 제작합니다.</p>
+
+                <div class="program-card fade-in">
+                    <h3>진로탐색 역량강화 프로그램</h3>
+                    <p>디지털 전환 시대에 맞춘 중장년층 IT 역량 강화</p>
+                    <ul class="program-features">
+                        <li>비전공자도 쉽게 시작하는 데이터 분석 기초 (20시간)</li>
+                        <li>ADSP자격증 과정 (30시간)</li>
+                        <li>Unity 게임 개발 (20시간)</li>
+                        <li>라즈베리파이 사물인터넷 기초 (20시간)</li>
+                        <li>나만의 AI 에이전트 만들기 프로그램 (10시간)</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">자세히 보기</a>
                 </div>
-                <div class="service-card">
-                    <h3>디지털 마케팅</h3>
-                    <p>SEO 최적화와 온라인 마케팅 전략을 통해 비즈니스 성장을 지원합니다.</p>
+
+                <div class="program-card fade-in">
+                    <h3>기업 대상 프로그램</h3>
+                    <p>기업의 디지털 혁신과 직원 역량 강화를 위한 맞춤형 교육</p>
+                    <ul class="program-features">
+                        <li>생성형 AI로 혁신하는 스마트 업무 전략</li>
+                        <li>AI Agent 만들기</li>
+                        <li>Make를 활용한 스마트 업무 자동화 실무 워크숍</li>
+                        <li>구글 스마트워크</li>
+                        <li>AI활용 영상 만들기</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">자세히 보기</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section" id="contact">
-            <h2>연락처</h2>
-            <div style="text-align: center;">
-                <p><strong>주소:</strong> 서울특별시 강남구 테헤란로 123</p>
-                <p><strong>전화:</strong> 02-1234-5678</p>
-                <p><strong>이메일:</strong> contact@company.com</p>
+    <!-- 통계 섹션 -->
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title">우리의 성과</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">2,500+</span>
+                    <span class="stat-label">교육 수료생</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">85%</span>
+                    <span class="stat-label">취업 성공률</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">기업 파트너</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">교육 만족도</span>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 회사명. All rights reserved.</p>
-    </footer>
+    <!-- 컨설팅 섹션 -->
+    <section class="consulting">
+        <div class="container">
+            <div class="consulting-content">
+                <div class="consulting-info">
+                    <h2>IT 컨설팅 서비스</h2>
+                    <p>기업의 디지털 혁신을 위한 전문 컨설팅 서비스를 제공합니다. 현재 상황을 분석하고 최적의 솔루션을 제안드립니다.</p>
+                    <ul class="consulting-features">
+                        <li>IT 인프라 구축 컨설팅</li>
+                        <li>디지털 전환 전략 수립</li>
+                        <li>시스템 통합 및 최적화</li>
+                        <li>보안 및 컴플라이언스</li>
+                        <li>데이터 거버넌스</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">컨설팅 문의</a>
+                </div>
+                <div class="consulting-visual">
+                    <div>전문 컨설팅 서비스</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 강의 일정 섹션 -->
+     <1--
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <h2 class="section-title">강의 신청 / 교육 일정</h2>
+            <div class="schedule-grid">
+                <div class="schedule-card fade-in">
+                    <div class="schedule-date">2025.07.01 - 2025.09.30</div>
+                    <div class="schedule-title">풀스택 웹 개발 과정</div>
+                    <div class="schedule-info">
+                        <span>📍 장소: 강남 교육센터</span>
+                        <span>⏰ 시간: 09:00 - 18:00</span>
+                        <span>👥 정원: 20명</span>
+                        <span>💰 수강료: 1,200,000원</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">신청하기</a>
+                </div>
+
+                <div class="schedule-card fade-in">
+                    <div class="schedule-date">2025.07.15 - 2025.08.15</div>
+                    <div class="schedule-title">데이터 분석 기초</div>
+                    <div class="schedule-info">
+                        <span>📍 장소: 온라인 (Zoom)</span>
+                        <span>⏰ 시간: 19:00 - 22:00</span>
+                        <span>👥 정원: 30명</span>
+                        <span>💰 수강료: 800,000원</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">신청하기</a>
+                </div>
+
+                <div class="schedule-card fade-in">
+                    <div class="schedule-date">2025.08.01 - 2025.10.31</div>
+                    <div class="schedule-title">AI & 머신러닝</div>
+                    <div class="schedule-info">
+                        <span>📍 장소: 판교 캠퍼스</span>
+                        <span>⏰ 시간: 10:00 - 17:00</span>
+                        <span>👥 정원: 15명</span>
+                        <span>💰 수강료: 1,500,000원</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">신청하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 콘텐츠 센터 섹션 -->
+    <section id="contents" class="contents">
+        <div class="container">
+            <h2 class="section-title">콘텐츠 센터</h2>
+            <div class="contents-grid">
+                <div class="content-card fade-in">
+                    <h3>기술 블로그</h3>
+                    <p>최신 IT 트렌드와 기술 정보를 제공합니다</p>
+                    <a href="#" class="btn btn-primary">더 보기</a>
+                </div>
+                <div class="content-card fade-in">
+                    <h3>유튜브 채널 </h3>
+                    <p>언제 어디서나 학습할 수 있는 온라인 콘텐츠</p>
+                    <a href="https://www.youtube.com/@nextedulab" class="btn btn-primary" target="_blank">보러가기 </a>
+                </div>
+                <div class="content-card fade-in">
+                    <h3>학습 자료</h3>
+                    <p>실습 예제와 강의자료 </p>
+                    <a href="https://cafe.naver.com/f-e/cafes/31445014/menus/20" class="btn btn-primary" target="_blank">자료실 </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 포트폴리오 섹션 
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">수강생 포트폴리오</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">E-commerce Platform</div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-title">쇼핑몰 플랫폼</div>
+                        <div class="portfolio-desc">React와 Node.js로 구현한 종합 쇼핑몰</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">Data Dashboard</div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-title">데이터 대시보드</div>
+                        <div class="portfolio-desc">Python과 Django를 활용한 분석 시스템</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">Mobile App</div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-title">모바일 앱</div>
+                        <div class="portfolio-desc">React Native로 개발한 소셜 미디어 앱</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">AI Chatbot</div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-title">AI 챗봇</div>
+                        <div class="portfolio-desc">자연어 처리 기반 고객 상담 봇</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">IoT Platform</div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-title">IoT 플랫폼</div>
+                        <div class="portfolio-desc">센서 데이터 수집 및 모니터링 시스템</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">Blockchain DApp</div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-title">블록체인 DApp</div>
+                        <div class="portfolio-desc">스마트 컨트랙트 기반 탈중앙화 앱</div>
+                    </div>
+                </div>
+            </div>
+            
+            -->
+        </div>
+    </section>
+
+    <!-- 커뮤니티/고객지원 섹션 -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">커뮤니티 / 고객 지원</h2>
+            <div class="community-grid">
+                <div class="community-card fade-in">
+                    <h3>📢 공지사항</h3>
+                    <div class="notice-list">
+                        <div class="notice-item">
+                            <span class="notice-date">2025.06.10</span>
+                            <span class="notice-title">2025년 하반기 교육과정 모집 안내</span>
+                        </div>
+                        <div class="notice-item">
+                            <span class="notice-date">2025.06.05</span>
+                            <span class="notice-title">여름휴가 기간 운영 안내</span>
+                        </div>
+                        <div class="notice-item">
+                            <span class="notice-date">2025.05.30</span>
+                            <span class="notice-title">새로운 AI 과정 개설 안내</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">더 보기</a>
+                </div>
+
+                <div class="community-card fade-in">
+                    <h3>❓ 자주 묻는 질문</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">수강료 할부 결제가 가능한가요?</div>
+                            <div class="faq-answer">네, 카드 할부 및 교육비 분할납부가 가능합니다.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">온라인 수업도 제공하나요?</div>
+                            <div class="faq-answer">실시간 온라인 강의와 녹화 강의를 모두 제공합니다.</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">FAQ 전체보기</a>
+                </div>
+
+                <div class="community-card fade-in">
+                    <h3>💬 문의하기</h3>
+                    <form class="contact-form">
+                        <input type="text" placeholder="이름" required>
+                        <input type="email" placeholder="이메일" required>
+                        <input type="tel" placeholder="연락처" required>
+                        <select required>
+                            <option value="">문의 유형 선택</option>
+                            <option value="course">교육과정 문의</option>
+                            <option value="consult">컨설팅 문의</option>
+                            <option value="etc">기타 문의</option>
+                        </select>
+                        <textarea placeholder="문의 내용" rows="4" required></textarea>
+                        <button type="submit" class="btn btn-primary">문의 보내기</button>
+                    </form>
+                </div>
+
+                <div class="community-card fade-in">
+                    <h3>📅 온라인 상담 예약</h3>
+                    <p>전문 상담사와 1:1 맞춤 상담을 받아보세요</p>
+                    <div class="consultation-info">
+                        <div class="consult-item">
+                            <span class="consult-time">🕐 평일 09:00 - 18:00</span>
+                        </div>
+                        <div class="consult-item">
+                            <span class="consult-time">📞 010-9393-3169</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">상담 예약하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 포함 -->
+    <div id="footer-container"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // 헤더와 푸터 동적 로드
+        document.addEventListener('DOMContentLoaded', function() {
+            // 헤더 로드
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                })
+                .catch(error => console.error('헤더 로드 실패:', error));
+
+            // 푸터 로드
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error('푸터 로드 실패:', error));
+        });
+    </script>
 </body>
 </html>
